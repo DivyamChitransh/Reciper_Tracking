@@ -7,6 +7,6 @@ router.get('/search',searchrecipe);
 router.get('/details/:id',getrecipeDetails);
 router.post('/save',saveRecipe);
 router.get('/saved',Getrecipes);
-router.put('/reorder',authenticate,reorder);
+router.put('/reorder',reorder);
 
 module.exports = router;

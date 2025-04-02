@@ -1,31 +1,91 @@
+/* General Styles */
 body {
     font-family: Arial, sans-serif;
     text-align: center;
+    background-color: #f8f9fa; /* Light gray background for better contrast */
+    color: #333; /* Darker text for better readability */
+    margin: 0;
+    padding: 0;
 }
 
+/* Header */
 header {
+    background-color: #007bff;
+    color: white;
+    padding: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
     margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Recipe Lists */
 #recipeList, #savedList {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 15px;
     justify-content: center;
+    padding: 20px;
 }
 
+/* Recipe Cards */
 .recipe-card {
-    border: 1px solid #ccc;
-    padding: 10px;
-    width: 200px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 220px;
     cursor: pointer;
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
+.recipe-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Recipe Image */
+.recipe-card img {
+    width: 100%;
+    border-radius: 6px;
+    object-fit: cover;
+}
+
+/* Recipe Title */
+.recipe-card h3 {
+    font-size: 1.1em;
+    margin: 10px 0;
+    color: #007bff;
+}
+
+/* Buttons */
 button {
+    display: block;
+    width: 100%;
     margin-top: 10px;
-    padding: 10px;
-    background-color: blue;
+    padding: 12px;
+    background-color: #007bff;
     color: white;
     border: none;
+    border-radius: 5px;
     cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #recipeList, #savedList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .recipe-card {
+        width: 90%;
+        max-width: 300px;
+    }
 }
