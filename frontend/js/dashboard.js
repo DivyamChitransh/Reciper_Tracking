@@ -1,4 +1,4 @@
-const API_BASE = "http://localhost:3000"; 
+const API_BASE = "https://reciper-tracking-4.onrender.com"; 
 
 async function searchRecipes() {
     const query = document.getElementById("searchQuery").value;
