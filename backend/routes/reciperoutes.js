@@ -5,8 +5,8 @@ const router = express.Router();
 
 router.get('/search',searchrecipe);
 router.get('/details/:id',getrecipeDetails);
-router.post('/save',authenticate,saveRecipe);
-router.get('/saved',authenticate,Getrecipes);
+router.post('/save',saveRecipe);
+router.get('/saved',Getrecipes);
 router.put('/reorder',authenticate,reorder);
 
 module.exports = router;

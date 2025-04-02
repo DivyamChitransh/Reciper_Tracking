@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+<body>
+
+    <header>
+        <h1>Recipe Dashboard</h1>
+        <input type="text" id="searchQuery" placeholder="Search for recipes...">
+        <button onclick="searchRecipes()">Search</button>
+    </header>
+
+    <section id="searchResults">
+        <h2>Search Results</h2>
+        <div id="recipeList"></div>
+    </section>
+
+    <section id="savedRecipes">
+        <h2>Saved Recipes</h2>
+        <ul id="savedList"></ul>
+        <button onclick="saveReorder()">Save Order</button>
+    </section>
+
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

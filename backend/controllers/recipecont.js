@@ -41,8 +41,7 @@ const saveRecipe = async(req,res) => {
 
 const Getrecipes = async(req,res) => {
     try{
-        const userId = req.user.id;
-        const recipes = await Recipe.find({userId}).sort('order');
+        const recipes = await Recipe.find().sort('order');
         res.status(200).json(recipes);
     }
     catch(error){
